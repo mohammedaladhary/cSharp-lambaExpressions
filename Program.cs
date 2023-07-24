@@ -98,13 +98,13 @@ namespace lambaExpressions
             DisplayStudents(topThreeStudents);
 
             // Task 5: Update the GPA of a specific student
-            string studentNameToUpdate = "Bob";
+            string studentNameToUpdate = "Said";
             double newGPA = 3.7;
             UpdateStudentGPA(studentRecords, studentNameToUpdate, newGPA);
             Console.WriteLine($"\nUpdated GPA of {studentNameToUpdate} to {newGPA}");
 
             // Task 6: Remove a student from the list based on their name
-            string studentNameToRemove = "Eva";
+            string studentNameToRemove = "Rawan";
             RemoveStudent(studentRecords, studentNameToRemove);
             Console.WriteLine($"\nRemoved student {studentNameToRemove} from the list.");
 
