@@ -1,0 +1,15 @@
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\bin\Debug\net6.0\lambaExpressions.exe
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\bin\Debug\net6.0\lambaExpressions.deps.json
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\bin\Debug\net6.0\lambaExpressions.runtimeconfig.json
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\bin\Debug\net6.0\lambaExpressions.dll
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\bin\Debug\net6.0\lambaExpressions.pdb
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\lambaExpressions.csproj.AssemblyReference.cache
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\lambaExpressions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\lambaExpressions.AssemblyInfoInputs.cache
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\lambaExpressions.AssemblyInfo.cs
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\lambaExpressions.csproj.CoreCompileInputs.cache
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\lambaExpressions.dll
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\refint\lambaExpressions.dll
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\lambaExpressions.pdb
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\lambaExpressions.genruntimeconfig.cache
+C:\Users\TRA\Desktop\code_TRA\lambaExpressions\obj\Debug\net6.0\ref\lambaExpressions.dll
