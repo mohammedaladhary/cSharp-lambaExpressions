@@ -67,6 +67,46 @@ namespace lambaExpressions
             //    Console.WriteLine(person.Name);
             //}
             //Console.WriteLine(person?.Name ?? "Hello"); //coalesing operator
+            Console.WriteLine("\n\n");
+            //------------------------------Student--------------------
+
+            List<Student> studentRecords = new List<Student>
+        {
+            new Student { Name = "Hamida", Age = 31, Gender = "Female", GPA = 2.8 },
+            new Student { Name = "Said", Age = 25, Gender = "Male", GPA = 3.5 },
+            new Student { Name = "Nasser", Age = 40, Gender = "Male", GPA = 3.0 },
+            new Student { Name = "Nasra", Age = 13, Gender = "Female", GPA = 2.9 },
+            new Student { Name = "Rawan", Age = 32, Gender = "Female", GPA = 3.9 },
+        };
+
+            // Task 1: Display the list of all students
+            Console.WriteLine("List of all students:");
+            DisplayStudents(studentRecords);
+
+            // Task 2: Filter and display male students with a GPA greater than 3.5
+            Console.WriteLine("\nMale students with a GPA greater than 3.5:");
+            var maleStudentsWithHighGPA = highGPAMale(studentRecords, 3.5);
+            DisplayStudents(maleStudentsWithHighGPA);
+
+            // Task 3: Find the average GPA of all female students
+            double averageGPAOfFemaleStudents = avgGPAFemale(studentRecords);
+            Console.WriteLine($"\nAverage GPA of all female students: {averageGPAOfFemaleStudents:F2}");
+
+            // Task 4: Display the names of the top three students with the highest GPA
+            Console.WriteLine("\nTop three students with the highest GPA:");
+            var topThreeStudents = top3HighestGPA(studentRecords);
+            DisplayStudents(topThreeStudents);
+
+            // Task 5: Update the GPA of a specific student
+            string studentNameToUpdate = "Bob";
+            double newGPA = 3.7;
+            UpdateStudentGPA(studentRecords, studentNameToUpdate, newGPA);
+            Console.WriteLine($"\nUpdated GPA of {studentNameToUpdate} to {newGPA}");
+
+            // Task 6: Remove a student from the list based on their name
+            string studentNameToRemove = "Eva";
+            RemoveStudent(studentRecords, studentNameToRemove);
+            Console.WriteLine($"\nRemoved student {studentNameToRemove} from the list.");
 
         }
 
@@ -96,6 +136,66 @@ namespace lambaExpressions
             {
                 Console.WriteLine(person.Name);
             }
+        }
+
+        //----------------------------student---------------------
+        static void DisplayStudents(List<Student> students)
+        {
+            foreach (var student in students)
+            {
+                Console.WriteLine($"Name: {student.Name}, Age: {student.Age}, Gender: {student.Gender}, GPA: {student.GPA}");
+            }
+        }
+
+        static List<Student> highGPAMale(List<Student> students, double gpaThreshold)
+        {
+            List<Student> result = new List<Student>();
+            foreach (var student in students)
+            {
+                if (student.Gender == "Male" && student.GPA > gpaThreshold)
+                {
+                    result.Add(student);
+                }
+            }
+            return result;
+        }
+
+        static double avgGPAFemale(List<Student> students)
+        {
+            double sumGPA = 0;
+            int fMaleCount = 0;
+            foreach (var student in students)
+            {
+                if (student.Gender == "Female")
+                {
+                    sumGPA += student.GPA;
+                    fMaleCount++;
+                }
+            }
+            return fMaleCount > 0 ? sumGPA / fMaleCount : 0;
+        }
+
+        static List<Student> top3HighestGPA(List<Student> students)
+        {
+            students.Sort((s1, s2) => s2.GPA.CompareTo(s1.GPA));
+            return students.GetRange(0, Math.Min(students.Count, 3));
+        }
+
+        static void UpdateStudentGPA(List<Student> students, string studentName, double newGPA)
+        {
+            foreach (var student in students)
+            {
+                if (student.Name == studentName)
+                {
+                    student.GPA = newGPA;
+                    break;
+                }
+            }
+        }
+
+        static void RemoveStudent(List<Student> students, string studentName)
+        {
+            students.RemoveAll(student => student.Name == studentName);
         }
     }
 }
