@@ -93,9 +93,11 @@ namespace lambaExpressions
             Console.WriteLine($"\nAverage GPA of all female students: {averageGPAOfFemaleStudents:F2}");
 
             // Task 4: Display the names of the top three students with the highest GPA
-            Console.WriteLine("\nTop three students with the highest GPA:");
+            Console.WriteLine("Top three students with the highest GPA:");
             var topThreeStudents = top3HighestGPA(studentRecords);
             DisplayStudents(topThreeStudents);
+
+            Console.WriteLine();
 
             // Task 5: Update the GPA of a specific student
             string studentName = "Said";
