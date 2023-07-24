@@ -98,7 +98,7 @@ namespace lambaExpressions
             DisplayStudents(topThreeStudents);
 
             Console.WriteLine();
-
+            
             // Task 5: Update the GPA of a specific student
             string studentName = "Said";
             double newGPA = 3.7;
