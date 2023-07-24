@@ -41,19 +41,32 @@ namespace lambaExpressions
             new Person("Sehar", 18, "Female", "muscat")
             };
 
-            List<Person> persons = list
+            //List<Person> persons = list
+            //    .Where(x => x.Age <= 25)
+            //    .OrderBy(x => x.Name)
+            //    .ToList();
+            //Person person = list.First(x => x.Address =="sohar");
+            //printPersonList(persons);
+            //Console.WriteLine(person);
+
+
+            List<String> Names = list
                 .Where(x => x.Age <= 25)
                 .OrderBy(x => x.Name)
-                .ToList();
+                .Select(x => x.Name)
+               .ToList();
 
+            foreach( String name in Names )
+            {
+                Console.WriteLine(name);
+            }
 
-            Person? person = list.FirstOrDefault(x => x.Address == "muscat");
-            //if(person != null)
+            //Person? person = list.FirstOrDefault(x => x.Address == "muscat");
+            //if (person != null)
             //{
             //    Console.WriteLine(person.Name);
             //}
-            Console.WriteLine(person?.Name ?? "Hello"); //coalesing operator
-            printPersonList(persons);
+            //Console.WriteLine(person?.Name ?? "Hello"); //coalesing operator
 
         }
 
