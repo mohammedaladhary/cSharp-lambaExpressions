@@ -104,9 +104,9 @@ namespace lambaExpressions
             Console.WriteLine($"\nUpdated GPA of {studentName} to {newGPA}");
 
             // Task 6: Remove a student from the list based on their name
-            string studentNameToRemove = "Rawan";
-            RemoveStudent(studentRecords, studentNameToRemove);
-            Console.WriteLine($"\nRemoved student {studentNameToRemove} from the list.");
+            string rmvStudentName = "Rawan";
+            RemoveStudent(studentRecords, rmvStudentName);
+            Console.WriteLine($"\nRemoved student {rmvStudentName} from the list.");
 
         }
 
